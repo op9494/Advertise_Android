@@ -20,11 +20,18 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:banner="@drawable/my_banner"
+            android:banner="@mipmap/ic_launcher_foreground"
             android:logo="@mipmap/ic_launcher"
 
             android:theme="@style/Theme.Leanback">
@@ -38,7 +45,10 @@
 
         </activity>
 
-
+        <!-- Developer information -->
+        <meta-data
+            android:name="com.example.myapp.OneDayDevelopers"
+            android:value="OneDayDevelopers" />
 
     </application>
 

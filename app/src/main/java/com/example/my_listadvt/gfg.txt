@@ -25,8 +25,11 @@ OkHttpClient client = new OkHttpClient();
                     String[] result = adLinkValues.toArray(new String[0]);
                     Log.d("fetchMonument", "onResponseck1: " + result);
 //
-                    Log.d("fetchMonument", "onResponsefdfg: " + result);
-                    returnUrls(result);
+                    for (String url : result) {
+
+                                videoList.add(url);
+
+                            }
                 } else {
                     Log.d("fetchMonument", "onResponse: " + response.code());
                 }

@@ -1,29 +1,16 @@
 package com.example.my_listadvt;
-import android.net.Uri;
-import android.os.Bundle;
-import android.widget.VideoView;
-import androidx.appcompat.app.AppCompatActivity;
-import java.util.ArrayList;
-import android.media.MediaPlayer;
-import android.widget.ProgressBar;
-import android.view.View;
-import android.os.AsyncTask;
 
-
-import java.io.BufferedInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.VideoView;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -44,9 +31,15 @@ public class MainActivity extends AppCompatActivity {
         videoView = findViewById(R.id.videoView);
         progressBar = findViewById(R.id.progressBar);
 
-        videoList.add("https://drive.google.com/uc?id=1QOFecl7OG0oHSxpEixss8NUhyvLgpuxg&export=download");
+        videoList.add("https://drive.google.com/uc?id=1R0KvXarAoqzrE9-qop4J1pmHPqthc1hi&export=download");
         videoList.add("https://drive.google.com/uc?id=1Q27Efw0C3uQuccdyOZoJ1krQty_mDLax&export=download");
-
+        videoList.add("https://drive.google.com/uc?id=1QOFecl7OG0oHSxpEixss8NUhyvLgpuxg&export=download");
+        videoList.add("https://drive.google.com/uc?id=1QDRpCt7vPqTLl6Kw1mBkjO0YaA5Q4rDr&export=download");
+        videoList.add("https://drive.google.com/uc?id=1Qj8__Cxp8DYpeqR-wJ2hIfIBG1Jz0f-J&export=download");
+        videoList.add("https://drive.google.com/uc?id=1QMGIDprE2bCZxE90LN5ykuHrDIhSxR3O&export=download");
+        videoList.add("https://drive.google.com/uc?id=1QRguw6TFHcNk--ySc1T8PYKl-IT1YbTL&export=download");
+        videoList.add("https://drive.google.com/uc?id=1QA-LxR7i3ZgMddnFtq6CvJNB0987gn5u&export=download");
+        videoList.add("https://drive.google.com/uc?id=1QPVs5a_W7qWLq-SHVsANJ-i6rOHUBP8O&export=download");
         loadVideo();
     }
 
