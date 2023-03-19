@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.My_listAdvt" parent="@style/Theme.Leanback" />
+</resources>

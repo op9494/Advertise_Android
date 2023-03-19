@@ -1,0 +1,34 @@
+OkHttpClient client = new OkHttpClient();
+        String url = "https://script.google.com/macros/s/AKfycbynFuVWyy7wtW6vl6jNKW5X7JwwgxmEirXD1ZtM6sF6LYE4Ko-Y_SmW7g9Fm8tuVX0mzg/exec";
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+                Log.d("fetchMonument", "onFailure: " + e.getMessage());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseStr = response.body().string();
+                    ObjectMapper mapper = new ObjectMapper();
+                    AdLink[] adLinks = mapper.readValue(responseStr, AdLink[].class);
+
+                    List<String> adLinkValues = new ArrayList<>();
+                    for (AdLink adLink : adLinks) {
+                        adLinkValues.add(adLink.adlink);
+                    }
+                    Log.d("fetchMonument", "onResponsdfeck1: " + adLinkValues);
+
+                    String[] result = adLinkValues.toArray(new String[0]);
+                    Log.d("fetchMonument", "onResponseck1: " + result);
+//
+                    Log.d("fetchMonument", "onResponsefdfg: " + result);
+                    returnUrls(result);
+                } else {
+                    Log.d("fetchMonument", "onResponse: " + response.code());
+                }
+            }
+        });
